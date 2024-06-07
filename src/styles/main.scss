@@ -1,0 +1,15 @@
+// base
+@import './base/reset';
+@import './base/variables';
+@import './base/mixins';
+@import './base/base';
+// components
+@import './components/header';
+@import './components/_footer';
+@import './components/benefitsSection';
+@import './components/apartments';
+@import './components/cta';
+@import './components//_videoSection';
+@import './components/section-map';
+@import './components/_feedback';
+@import './components/responsive_player';

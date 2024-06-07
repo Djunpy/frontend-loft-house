@@ -1,0 +1,24 @@
+.player-wrapper {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 500px;
+	width: 800px;
+	background-color: $second-modal-bg-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5%;
+}
+
+.player-wrapper .menu-icon-btn {
+	top: 20px;
+	right: 20px;
+	position: absolute;
+}
+// .player-wrapper .react-player {
+// 	width: 1133px;
+// 	height: 500px;
+
+// }

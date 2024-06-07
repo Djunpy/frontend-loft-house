@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: $dark;
+	color: $white;
+	font-size: 16px;
+}
+
+a {
+	color: $white;
+	transition: color 0.2s ease-in;
+	&:hover {
+		color: $accent;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1140px;
+	// background-color: blue;
+
+	&--sm {
+		max-width: 840px;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.visually-hidden {
+	/* Contain text within 1px box */
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+
+	/* Keep the layout */
+	position: absolute;
+
+	/* Remove any visible trace (e.g. background color) */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%); /* browsers in the future */
+
+	/* Prevent the screen reader to skip spaces between words */
+	white-space: nowrap;
+}
+
+.none {
+	display: none !important;
+}
+
+.title-2 {
+	font-size: 36px;
+	font-family: $font-accent;
+	color: $accent;
+	font-weight: 700;
+}
+
+.form__input {
+	height: 50px;
+	padding: 12px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: $white;
+	font-size: 14px;
+	transition: background-color 0.2s ease-in;
+	&::placeholder {
+		color: $placeholder;
+	}
+	&:focus {
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+}
+
+.form__privacy {
+	font-size: 13px;
+	color: $muted;
+	text-align: center;
+	line-height: 1.23;
+}
+
+.form__button {
+	height: 50px;
+	padding: 12px;
+	background-color: $accent;
+	font-size: 16px;
+	color: $white;
+	font-weight: 700;
+	text-align: center;
+	transition: background-color 0.2s ease-in;
+	&:hover {
+		background-color: saturate($accent, 10%);
+	}
+}
+
+/* ========= menu Icon ================= */
+.menu-icon-btn {
+	--time: 0.1s;
+	--width: 40px;
+	--height: 30px;
+	--line-height: 1px;
+	--line-margin: 2;
+	--color: #fff;
+
+	height: var(--height);
+	width: var(--width);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-icon {
+	position: relative;
+	width: var(--width);
+	height: var(--line-height);
+	background-color: var(--color);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+	content: '';
+	display: block;
+
+	position: absolute;
+	left: 0;
+
+	width: var(--width);
+	height: var(--line-height);
+
+	background-color: var(--color);
+	transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.menu-icon::before {
+	top: calc(var(--line-height) * -8);
+}
+
+.menu-icon::after {
+	top: calc(var(--line-height) * 8);
+}
+
+.menu-icon.menu-icon--active {
+	background-color: transparent;
+}
+
+.menu-icon.menu-icon--active::before,
+.menu-icon.menu-icon--active::after {
+	top: 0;
+	transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.menu-icon.menu-icon--active::before {
+	transform: rotate(45deg);
+}
+
+.menu-icon.menu-icon--active::after {
+	transform: rotate(-45deg);
+}
+/* ========= menu Icon ================= */
